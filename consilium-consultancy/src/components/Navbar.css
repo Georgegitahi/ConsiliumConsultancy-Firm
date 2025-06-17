@@ -1,0 +1,36 @@
+/* Navbar.css */
+
+/* Smooth transition for link hovers */
+nav a {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Logo or brand name styling */
+nav a.text-xl {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Optional: Shadow hover effect for Book button */
+nav a.bg-brown-700:hover {
+  box-shadow: 0 4px 6px rgba(91, 51, 0, 0.2);
+}
+
+/* Mobile dropdown box enhancement */
+@media (max-width: 768px) {
+  .mobile-menu {
+    animation: fadeDown 0.3s ease-in-out;
+  }
+}
+
+/* Fade down animation */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
