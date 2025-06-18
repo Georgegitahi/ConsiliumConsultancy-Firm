@@ -19,6 +19,7 @@ const Home = () => (
   
   
     <div className="flex flex-col items-center justify-center bg-slate-50 text-gray-800">
+      
 
     <Hero />
     <ServicesSection />

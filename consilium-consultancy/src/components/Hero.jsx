@@ -30,7 +30,7 @@ const Hero = () => {
     </div>
   </div>
   <div className="md:w-1/2 mt-8 md:mt-0">
-    <img src="/hero-image.svg" alt="Hero" className="w-full max-w-md mx-auto" />
+    {/* <img src="/hero-image.svg" alt="Hero" className="w-full max-w-md mx-auto" /> */}
   </div>
       <motion.div
         className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between"
