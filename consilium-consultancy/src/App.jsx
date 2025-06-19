@@ -10,50 +10,103 @@ import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
 import Contact from './pages/Contact';
 import Layout from './components/Layout';
+import AnimatedBackground from './components/AnimatedBackground';
 
-
-
-
-// TEMP Pages to test routes
+// Enhanced Home Component
 const Home = () => (
-  
-  
-    <div className="flex flex-col items-center justify-center bg-slate-50 text-gray-800">
-      
-
-    <Hero />
-    <ServicesSection />
-    <WhyChooseUs />
-    <Footer />
-    <Testimonials/>
-    <Contact/>
-    {/* <Layout/> */}
+  <div className="relative min-h-screen">
+    {/* Live Background with default settings */}
+    <AnimatedBackground />
+    
+    {/* Content Container with proper z-index */}
+    <div className="relative z-10">
+      <Hero />
+      <ServicesSection />
+      <WhyChooseUs />
+      <Testimonials />
     </div>
-  
+  </div>
 );
-const About = () => <div className="p-4 text-2xl">About Us</div>;
-const Services = () => <div className="p-4 text-2xl">Our Services</div>;
-// const Blog = () => <div className="p-4 text-2xl">Blog</div>;
-// const Contact = () => <div className="p-4 text-2xl">Contact</div>;
-const Book = () => <div className="p-4 text-2xl">Book Appointment</div>;
+
+// About Page with warm variant
+const About = () => (
+  <div className="relative min-h-screen">
+    <AnimatedBackground variant="warm" intensity="low" />
+    <div className="relative z-10 flex items-center justify-center min-h-screen">
+      <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 shadow-lg">
+        <h1 className="text-4xl font-bold text-gray-800">About Us</h1>
+        <p className="text-gray-600 mt-4">Learn more about our company and mission.</p>
+      </div>
+    </div>
+  </div>
+);
+
+// Services Page with cool variant
+const Services = () => (
+  <div className="relative min-h-screen">
+    <AnimatedBackground variant="cool" intensity="medium" />
+    <div className="relative z-10 flex items-center justify-center min-h-screen">
+      <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 shadow-lg">
+        <h1 className="text-4xl font-bold text-gray-800">Our Services</h1>
+        <p className="text-gray-600 mt-4">Discover what we can do for you.</p>
+      </div>
+    </div>
+  </div>
+);
+
+// Book Page with high intensity
+const Book = () => (
+  <div className="relative min-h-screen">
+    <AnimatedBackground variant="default" intensity="high" />
+    <div className="relative z-10 flex items-center justify-center min-h-screen">
+      <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 shadow-lg">
+        <h1 className="text-4xl font-bold text-gray-800">Book Appointment</h1>
+        <p className="text-gray-600 mt-4">Schedule your appointment with us today.</p>
+      </div>
+    </div>
+  </div>
+);
 
 function App() {
   return (
     <Router>
-      
-      
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/book" element={<Book />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/" element={<Layout> <Home /></Layout>}/>
-
-
-      </Routes>
+      <div className="relative">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/blog" element={
+            <div className="relative min-h-screen">
+              <AnimatedBackground variant="minimal" intensity="low" />
+              <div className="relative z-10">
+                <Blog />
+              </div>
+            </div>
+          } />
+          <Route path="/contact" element={
+            <div className="relative min-h-screen">
+              <AnimatedBackground variant="cool" intensity="medium" />
+              <div className="relative z-10">
+                <Contact />
+              </div>
+            </div>
+          } />
+          <Route path="*" element={
+            <Layout>
+              <AnimatedBackground variant="minimal" intensity="low" />
+              <div className="relative z-10 flex items-center justify-center min-h-screen">
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 shadow-lg">
+                  <h1 className="text-2xl font-bold text-gray-800">Page Not Found</h1>
+                  <p className="text-gray-600 mt-2">The page you're looking for doesn't exist.</p>
+                </div>
+              </div>
+            </Layout>
+          }/>
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }

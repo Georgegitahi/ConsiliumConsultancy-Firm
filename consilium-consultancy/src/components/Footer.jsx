@@ -8,7 +8,9 @@ const Footer = () => {
     { name: 'Home', href: '/', icon: '🏠' },
     { name: 'Services', href: '/services', icon: '💼' },
     { name: 'Blog', href: '/blog', icon: '📝' },
-    { name: 'Book', href: '/book', icon: '📅' }
+    { name: 'Book', href: '/book', icon: '📅' },
+    { name: 'Contact', href: '/contact', icon: '📅' }
+
   ];
 
   return (
@@ -102,6 +104,12 @@ const Footer = () => {
               <div className="flex items-center space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
                 <div className="w-5 h-5 text-purple-400 flex-shrink-0">✉️</div>
                 <span className="text-gray-300 text-sm break-all">info@consiliumconsultancy.com</span>
+                
+              </div>
+              <div className="flex items-center space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
+                <div className="w-5 h-5 text-purple-400 flex-shrink-0">✉️</div>
+                <span className="text-gray-300 text-sm break-all">career@consiliumconsultancy.com</span>
+                
               </div>
             </div>
           </div>
