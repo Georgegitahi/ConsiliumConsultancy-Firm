@@ -40,13 +40,13 @@ const Contact = () => {
 </form>
 
 <div className="mt-10">
-  <h3 className="text-xl font-semibold text-gray-800 mb-4">Find Us</h3>
+  {/* <h3 className="text-xl font-semibold text-gray-800 mb-4">Find Us</h3> */}
   <iframe
     title="Fiducia Capital Location"
     className="w-full h-64 rounded"
     frameBorder="0"
     style={{ border: 0 }}
-    src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Nairobi+Kenya"
+    // src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Nairobi+Kenya"
     allowFullScreen
   ></iframe>
 </div>

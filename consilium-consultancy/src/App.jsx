@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './pages/Contact';
 import Layout from './components/Layout';
 import AnimatedBackground from './components/AnimatedBackground';
+import PartnershipsPage from './components/PartnershipsPage'; // Import the new Partnerships component
 
 // Enhanced Home Component
 const Home = () => (
@@ -67,6 +68,14 @@ const Book = () => (
   </div>
 );
 
+// Partnerships Page wrapper - using the PartnershipsPage component
+const Partnerships = () => (
+  <div className="relative">
+    {/* The PartnershipsPage component already has its own background */}
+    <PartnershipsPage />
+  </div>
+);
+
 function App() {
   return (
     <Router>
@@ -76,6 +85,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/book" element={<Book />} />
           <Route path="/blog" element={
             <div className="relative min-h-screen">

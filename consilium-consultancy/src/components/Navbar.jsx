@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Sparkles, Shield, TrendingUp } from 'lucide-react';
+import { Menu, X, ChevronDown, Sparkles, Shield, TrendingUp, Users } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +24,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services', dropdown: services },
+    { name: 'Partnerships', href: '/partnerships', icon: Users },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' }
   ];
@@ -69,6 +70,7 @@ const Navbar = () => {
                     href={link.href}
                     className="relative px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-1 text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                   >
+                    {link.icon && <link.icon className="w-4 h-4" />}
                     {link.name}
                     {link.dropdown && (
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -136,7 +138,10 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <span className="font-medium">{link.name}</span>
+                  <div className="flex items-center gap-2">
+                    {link.icon && <link.icon className="w-4 h-4" />}
+                    <span className="font-medium">{link.name}</span>
+                  </div>
                   {link.dropdown && (
                     <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
                   )}

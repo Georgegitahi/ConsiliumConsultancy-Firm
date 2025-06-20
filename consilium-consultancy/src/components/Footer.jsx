@@ -9,8 +9,8 @@ const Footer = () => {
     { name: 'Services', href: '/services', icon: '💼' },
     { name: 'Blog', href: '/blog', icon: '📝' },
     { name: 'Book', href: '/book', icon: '📅' },
-    { name: 'Contact', href: '/contact', icon: '📅' }
-
+    { name: 'Partnerships', href: '/partnerships', icon: '🤝' },
+    { name: 'Contact', href: '/contact', icon: '📞' }
   ];
 
   return (
@@ -102,12 +102,12 @@ const Footer = () => {
                 <span className="text-gray-300 text-sm">+254 7026 15905</span>
               </div>
               <div className="flex items-center space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
-                <div className="w-5 h-5 text-purple-400 flex-shrink-0">✉️</div>
+                <div className="w-5 h-5 text-purple-400 flex-shrink-0">📧</div>
                 <span className="text-gray-300 text-sm break-all">info@consiliumconsultancy.com</span>
                 
               </div>
               <div className="flex items-center space-x-3 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
-                <div className="w-5 h-5 text-purple-400 flex-shrink-0">✉️</div>
+                <div className="w-5 h-5 text-purple-400 flex-shrink-0">💼</div>
                 <span className="text-gray-300 text-sm break-all">career@consiliumconsultancy.com</span>
                 
               </div>
@@ -130,7 +130,7 @@ const Footer = () => {
                   placeholder="Enter your email address"
                   className="w-full p-4 pr-12 rounded-xl bg-gray-800/70 backdrop-blur-sm border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:bg-gray-800/90 focus:bg-gray-800"
                 />
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-blue-400 transition-colors duration-300">✉️</div>
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-blue-400 transition-colors duration-300">📧</div>
               </div>
               <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 px-6 rounded-xl font-semibold flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 hover:shadow-blue-500/25 active:scale-95">
                 <span>Subscribe Now</span>
